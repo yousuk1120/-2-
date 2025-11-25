@@ -375,3 +375,19 @@ body {
     font-size: 1.2rem;
     vertical-align: middle;
 }
+/* ===== 확실하게 덮어쓰기 (맨 아래에 붙여넣으세요) ===== */
+body {
+    /* 기존 배경 무시하고 그라데이션 적용 */
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFF5F5 40%, #FFEBEB 100%) !important;
+    background-attachment: fixed !important;
+}
+
+.hero {
+    /* 히어로 배경 투명하게 (그래야 body 색이 보임) */
+    background: transparent !important;
+}
+
+/* 혹시 남아있을지 모르는 장식 숨기기 */
+.hero-decorations {
+    display: none !important;
+}
