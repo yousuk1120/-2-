@@ -84,4 +84,3 @@ function startSnow() {
         }
     }, 300);
 }
-
