@@ -7,31 +7,76 @@
     <!-- Pretendard 폰트 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- [추가됨] 아이콘 사용을 위한 FontAwesome -->
+    <!-- 아이콘 사용을 위한 FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- [추가됨] 하단 아이콘 스타일 (기존 styles.css를 건드리지 않기 위해 여기에 적음) -->
     <style>
+        /* --- [수정됨] 팀 헤더 디자인 업그레이드 --- */
+        
+        /* 1. 모든 팀 이름(H3) 흰색 통일 및 가독성 확보 */
+        .team-header h3 {
+            color: #ffffff !important;
+            font-weight: 800;
+            letter-spacing: 1px;
+            /* 배경색에 상관없이 글자가 잘 보이도록 진한 그림자 추가 */
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5), 0 0 5px rgba(0,0,0,0.3) !important;
+            margin: 0 10px; /* 아이콘과 간격 벌리기 */
+        }
+
+        /* 2. 양옆 이모티콘(아이콘) 가시성 확보 */
+        .snow-deco {
+            font-size: 1.8rem; /* 크기 키움 */
+            /* 배경색과 겹치지 않게 그림자 추가 (팝업 효과) */
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.6));
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+        .team-header:hover .snow-deco {
+            transform: scale(1.2) rotate(15deg); /* 마우스 올리면 움직임 */
+        }
+
+        /* 3. 찬우팀 (White) - 튀게 만들기 */
+        /* 기존 .white-bg 클래스를 덮어씀 */
+        .white-bg {
+            /* 밋밋한 흰색 대신 '빛나는 얼음' 느낌의 그라데이션 */
+            background: linear-gradient(135deg, #ffffff 0%, #e6f3ff 100%) !important;
+            /* 테두리와 빛나는 효과(Glow) 추가 */
+            border: 2px solid rgba(255, 255, 255, 1) !important;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6) !important;
+        }
+        
+        /* 찬우팀은 배경이 밝아서 흰색 글자가 안 보일 수 있으므로 텍스트 그림자를 더 진하게(파란빛) 조정 */
+        .white-bg h3 {
+            text-shadow: 0 0 5px #4a90e2, 0 1px 3px #000000 !important;
+        }
+        /* 찬우팀 눈송이도 잘 보이게 파란 아우라 추가 */
+        .white-bg .snow-deco {
+            filter: drop-shadow(0 0 2px #4a90e2) drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+        }
+
+        /* 서현팀(초록), 지우팀(빨강)도 흰 글자 잘 보이게 배경색 살짝 조정 (필요시) */
+        .green-bg { box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3); }
+        .red-bg { box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3); }
+
+
+        /* --- [기존] 하단 아이콘 스타일 --- */
         .social-links {
             margin-top: 20px;
             display: flex;
             justify-content: center;
-            gap: 25px; /* 아이콘 간격 */
+            gap: 25px;
             padding-bottom: 10px;
         }
         .social-links a {
-            color: #ccc; /* 기본 색상 (회색) */
-            font-size: 28px; /* 아이콘 크기 */
+            color: #ccc;
+            font-size: 28px;
             transition: all 0.3s ease;
             text-decoration: none;
         }
         .social-links a:hover {
-            transform: scale(1.15); /* 마우스 올리면 커짐 */
+            transform: scale(1.15);
         }
-        /* 인스타그램 마우스 올렸을 때 색상 */
         .social-links a.insta:hover { color: #E1306C; }
-        /* 유튜브 마우스 올렸을 때 색상 */
         .social-links a.youtube:hover { color: #FF0000; }
     </style>
 </head>
@@ -140,15 +185,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/results?search_query=Day6+Sweat+Chaos" target="_blank" class="song-link">
+                    <a href="https://www.youtube.com/results?search_query=Day6+Sweet+Chaos" target="_blank" class="song-link">
                         <span class="check-icon">✔</span>
-                        <div class="song-info"><span class="title">Sweat Chaos</span><span class="artist">Day6</span></div>
+                        <!-- [수정됨] Sweat -> Sweet -->
+                        <div class="song-info"><span class="title">Sweet Chaos</span><span class="artist">Day6</span></div>
                     </a>
                 </li>
             </ul>
         </div>
 
-        <!-- 2. 찬우팀 -->
+        <!-- 2. 찬우팀 (스타일 수정됨: 배경 튀게, 글자 잘 보이게) -->
         <div class="team-card scroll-reveal">
             <div class="team-header white-bg">
                 <span class="snow-deco">❄️</span>
@@ -268,13 +314,13 @@
         </div>
     </section>
 
-    <!-- 푸터 (여기에 아이콘 추가됨) -->
+    <!-- 푸터 -->
     <footer class="footer">
         <div class="container center-align">
             <h3>Authentic</h3>
             <p>2025 2nd Semester Regular Performance</p>
             
-            <!-- [추가됨] 소셜 미디어 아이콘 -->
+            <!-- 소셜 미디어 아이콘 -->
             <div class="social-links">
                 <!-- 인스타그램 -->
                 <a href="https://www.instagram.com/authentics_band?igsh=OTl0bWJkc3VnNngz" target="_blank" class="insta" title="Instagram">
