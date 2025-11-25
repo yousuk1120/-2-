@@ -7,6 +7,33 @@
     <!-- Pretendard 폰트 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- [추가됨] 아이콘 사용을 위한 FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- [추가됨] 하단 아이콘 스타일 (기존 styles.css를 건드리지 않기 위해 여기에 적음) -->
+    <style>
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px; /* 아이콘 간격 */
+            padding-bottom: 10px;
+        }
+        .social-links a {
+            color: #ccc; /* 기본 색상 (회색) */
+            font-size: 28px; /* 아이콘 크기 */
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            transform: scale(1.15); /* 마우스 올리면 커짐 */
+        }
+        /* 인스타그램 마우스 올렸을 때 색상 */
+        .social-links a.insta:hover { color: #E1306C; }
+        /* 유튜브 마우스 올렸을 때 색상 */
+        .social-links a.youtube:hover { color: #FF0000; }
+    </style>
 </head>
 <body>
     <!-- 눈송이 효과 -->
@@ -32,7 +59,7 @@
         </nav>
     </header>
 
-<!-- 히어로 섹션 (수정됨: 장식 텍스트 복구) -->
+<!-- 히어로 섹션 -->
 <section class="hero" id="hero">
     <div class="star-bg">
         <div class="star s1"></div>
@@ -51,14 +78,12 @@
             <h1 class="main-title">
                 <span class="concert-title text-red">산타 출근 5일 전,</span><br>
                 <span class="concert-desc">
-                    <!-- 반짝이 복구 -->
                     <span class="deco-text">✨</span> 어센틱의 정기공연이 <span class="deco-text">✨</span><br>
                     열립니다.
                 </span>
             </h1>
             
             <div class="d-day-card scroll-reveal delay-1">
-                <!-- 선물상자 아이콘 복구 -->
                 <div class="d-day-header">🎁 Coming Soon</div>
                 <div class="d-day-body">
                     <span id="d-day-count">D-Day 계산중...</span>
@@ -81,19 +106,16 @@
     </div>
 </section>
 
-<!-- (공연 정보 섹션 등은 그대로 두세요) -->
-
-<!-- 셋리스트 (팀별 장식 수정) -->
+<!-- 셋리스트 -->
 <section class="section" id="setlist">
     <div class="container center-align">
         <h2 class="section-header scroll-reveal">Set List</h2>
         
         <div class="part-label scroll-reveal">Part 1</div>
 
-        <!-- 1. 서현팀 (트리 장식) -->
+        <!-- 1. 서현팀 -->
         <div class="team-card scroll-reveal">
             <div class="team-header green-bg">
-                <!-- ❄️ 대신 🎄로 변경 -->
                 <span class="snow-deco">🎄</span>
                 <h3>서현팀</h3>
                 <span class="snow-deco">🎄</span>
@@ -126,7 +148,7 @@
             </ul>
         </div>
 
-        <!-- 2. 찬우팀 (화이트 - 눈송이 유지하되 잘 보이게) -->
+        <!-- 2. 찬우팀 -->
         <div class="team-card scroll-reveal">
             <div class="team-header white-bg">
                 <span class="snow-deco">❄️</span>
@@ -161,10 +183,9 @@
             </ul>
         </div>
 
-        <!-- 3. 지우팀 (루돌프 장식) -->
+        <!-- 3. 지우팀 -->
         <div class="team-card scroll-reveal">
             <div class="team-header red-bg">
-                <!-- ❄️ 대신 🦌로 변경 -->
                 <span class="snow-deco">🦌</span>
                 <h3>지우팀</h3>
                 <span class="snow-deco">🦌</span>
@@ -247,10 +268,24 @@
         </div>
     </section>
 
+    <!-- 푸터 (여기에 아이콘 추가됨) -->
     <footer class="footer">
         <div class="container center-align">
             <h3>Authentic</h3>
             <p>2025 2nd Semester Regular Performance</p>
+            
+            <!-- [추가됨] 소셜 미디어 아이콘 -->
+            <div class="social-links">
+                <!-- 인스타그램 -->
+                <a href="https://www.instagram.com/authentics_band?igsh=OTl0bWJkc3VnNngz" target="_blank" class="insta" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <!-- 유튜브 -->
+                <a href="https://www.youtube.com/@CJU_Authentic" target="_blank" class="youtube" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+
             <p class="copyright">© 2025 Authentic. All rights reserved.</p>
         </div>
     </footer>
