@@ -26,7 +26,7 @@ body {
 
 /* Utilities */
 .container { max-width: 600px; margin: 0 auto; padding: 0 20px; }
-.center-align { display: flex; flex-direction: column; align-items: center; } /* 중앙 정렬 강제 */
+.center-align { display: flex; flex-direction: column; align-items: center; }
 .section { padding: 60px 0; width: 100%; }
 .text-red { color: var(--christmas-red); }
 .text-green { color: var(--christmas-green); }
@@ -62,7 +62,7 @@ body {
 .hamburger { display: none; border: none; background: none; flex-direction: column; gap: 5px; cursor: pointer; }
 .hamburger span { width: 25px; height: 3px; background: var(--christmas-red); border-radius: 3px; }
 
-/* ===== Hero Section ===== */
+/* ===== Hero Section (폰트 크기 수정됨) ===== */
 .hero {
     min-height: 100vh; padding-top: 80px;
     display: flex; flex-direction: column; align-items: center; text-align: center;
@@ -73,11 +73,29 @@ body {
 .sub-badge {
     background: #FFE5E5; color: var(--christmas-red);
     padding: 6px 15px; border-radius: 50px; font-weight: 700; font-size: 0.9rem;
-    margin-bottom: 20px; display: inline-block;
+    margin-bottom: 25px; display: inline-block;
 }
 
 .main-title {
-    font-size: 2.8rem; font-weight: 800; line-height: 1.3; margin-bottom: 30px;
+    margin-bottom: 35px; line-height: 1.3;
+}
+
+/* 제목: 너무 크지 않게 2.6rem으로 조절 */
+.concert-title {
+    font-size: 2.6rem; 
+    font-weight: 900;
+    display: block;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    color: var(--christmas-red);
+}
+
+/* 설명: 밸런스를 위해 1.5rem으로 조절 */
+.concert-desc {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    word-break: keep-all;
 }
 
 /* D-Day Card */
@@ -113,9 +131,7 @@ body {
 /* ===== Section Headers ===== */
 .section-header {
     text-align: center; font-size: 2rem; font-weight: 800; margin-bottom: 40px;
-    color: var(--text-black); position: relative;
-    /* 중앙 정렬 보장 */
-    width: 100%; display: block;
+    color: var(--text-black); position: relative; width: 100%; display: block;
 }
 
 .section-header::after {
@@ -146,7 +162,6 @@ body {
 .info-text h3 { font-size: 0.9rem; color: var(--text-grey); margin-bottom: 5px; }
 .info-text p { font-size: 1.2rem; font-weight: 700; }
 
-/* Mini Map Buttons */
 .mini-map-buttons { display: flex; gap: 8px; margin-top: 10px; }
 .mini-btn {
     text-decoration: none; padding: 6px 12px; border-radius: 6px;
@@ -205,7 +220,6 @@ body {
 .song-list li { border-bottom: 1px solid #F5F5F5; }
 .song-list li:last-child { border: none; }
 
-/* Song Link Styling */
 .song-link {
     display: flex; align-items: center; gap: 15px;
     padding: 15px 20px; text-decoration: none; color: inherit;
@@ -233,7 +247,7 @@ body {
 .question-mark { font-size: 3rem; font-weight: 900; margin: 10px 0; color: #555; letter-spacing: 5px; }
 .secret-desc { color: #AAA; font-size: 0.9rem; }
 
-/* ===== Extras (Message & Photo) ===== */
+/* ===== Extras ===== */
 .grid-2-col {
     display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;
 }
@@ -252,9 +266,12 @@ body {
     margin-top: 40px; color: var(--text-grey); border-top: 1px solid #EEE;
 }
 
-/* ===== Mobile & Snow ===== */
+/* ===== Mobile & Snow (수정됨) ===== */
 @media (max-width: 768px) {
-    .main-title { font-size: 2.2rem; }
+    /* 모바일에서 제목과 설명 크기 최적화 */
+    .concert-title { font-size: 2.2rem; } 
+    .concert-desc { font-size: 1.3rem; }
+    
     .hamburger { display: flex; }
     .nav-menu {
         position: fixed; top: 60px; right: -100%; width: 70%; height: 100vh;
@@ -262,7 +279,7 @@ body {
         transition: 0.3s; box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     }
     .nav-menu.active { right: 0; }
-    .grid-2-col { grid-template-columns: 1fr; } /* 모바일에서 세로로 배치 */
+    .grid-2-col { grid-template-columns: 1fr; } /* 모바일에서 카드 세로 배치 */
 }
 
 .snow-container {
