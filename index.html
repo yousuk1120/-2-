@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentic - 산타 출근 5일 전</title>
+    <!-- Pretendard 폰트 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 눈송이 효과 -->
+    <div class="snow-container" id="snowContainer"></div>
+
+    <!-- 헤더 -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Authentic</h1>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="메뉴">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero">홈</a></li>
+                <li><a href="#info">공연정보</a></li>
+                <li><a href="#setlist">셋리스트</a></li>
+                <li><a href="#extras">이벤트</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text scroll-reveal">
+                <span class="sub-badge">2025 2학기 정기공연</span>
+                <h1 class="main-title">
+                    <span class="text-red">산타</span> 출근 5일 전,<br>
+                    <span class="text-green">Authentic</span>이<br>
+                    먼저 시작합니다.
+                </h1>
+                
+                <!-- D-Day 카운터 -->
+                <div class="d-day-card scroll-reveal delay-1">
+                    <div class="d-day-header">Coming Soon</div>
+                    <div class="d-day-body">
+                        <span id="d-day-count">D-Day 계산중...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 대형 포스터 영역 -->
+            <div class="poster-frame scroll-reveal delay-2">
+                <!-- 실제 포스터 이미지가 있다면 아래 주석을 풀고 경로를 수정하세요 -->
+                <!-- <img src="poster.jpg" alt="공연 포스터" class="poster-img"> -->
+                <div class="poster-placeholder">
+                    <span class="poster-icon">🎄</span>
+                    <h3>Poster Coming Soon</h3>
+                    <p>곧 공개될 포스터를 기대해주세요.</p>
+                </div>
+            </div>
+            
+            <div class="scroll-down">
+                <span>Scroll</span>
+                <div class="arrow">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 공연 정보 (Invitation) -->
+    <section class="section" id="info">
+        <div class="container center-align">
+            <h2 class="section-header scroll-reveal">Invitation</h2>
+            
+            <div class="info-list-card scroll-reveal">
+                <div class="info-row">
+                    <div class="icon-circle red">📅</div>
+                    <div class="info-text">
+                        <h3>Date</h3>
+                        <p>2025. 12. 20 (토)</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="icon-circle green">⏰</div>
+                    <div class="info-text">
+                        <h3>Time</h3>
+                        <!-- 18:00 입장으로 수정 -->
+                        <p>18:30 (입장 18:00~)</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="icon-circle red">📍</div>
+                    <div class="info-text">
+                        <h3>Location</h3>
+                        <p>카페 에빅</p>
+                        <!-- 지도 버튼 통합 -->
+                        <div class="mini-map-buttons">
+                            <a href="https://map.naver.com/p/search/청주%20카페에빅" target="_blank" class="mini-btn naver">N 네이버</a>
+                            <a href="https://map.kakao.com/?q=청주%20카페에빅" target="_blank" class="mini-btn kakao">K 카카오</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스페셜 이벤트 (Event & Prizes) -->
+    <section class="section">
+        <div class="container center-align">
+            <div class="event-card scroll-reveal">
+                <div class="card-header-ribbon">SPECIAL EVENT</div>
+                <div class="card-body">
+                    <h3>👔 Dress Code</h3>
+                    <div class="color-palette">
+                        <div class="color-ball red">Red</div>
+                        <div class="color-ball green">Green</div>
+                        <div class="color-ball white">White</div>
+                    </div>
+                    <p class="event-desc">
+                        위 3가지 컬러 중 하나를 입고 오시면<br>
+                        선착순으로 <strong>머핀</strong>을 드려요! 🧁
+                    </p>
+                    <div class="divider-line"></div>
+                    <p class="event-desc-sub">
+                        🎁 <strong>공연 중간 Lucky Draw!</strong><br>
+                        공연 중간중간 추첨을 통해<br>
+                        푸짐한 경품을 드립니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 셋리스트 (Part 1 & 2) -->
+    <section class="section" id="setlist">
+        <div class="container center-align">
+            <h2 class="section-header scroll-reveal">Set List</h2>
+            
+            <!-- PART 1 라벨 -->
+            <div class="part-label scroll-reveal">Part 1</div>
+
+            <!-- 서현팀 -->
+            <div class="team-card scroll-reveal">
+                <div class="team-header red-bg">
+                    <span class="snow-deco">❄️</span>
+                    <h3>서현팀</h3>
+                    <span class="snow-deco">❄️</span>
+                </div>
+                <ul class="song-list">
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=플라워+애정표현" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">애정표현</span>
+                                <span class="artist">플라워</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=Vaundy+괴수의꽃노래" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">괴수의 꽃노래</span>
+                                <span class="artist">Vaundy</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=전기뱀장어+적도" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">적도</span>
+                                <span class="artist">전기뱀장어</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=Day6+Sweat+Chaos" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">Sweat Chaos</span>
+                                <span class="artist">Day6</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 찬우팀 -->
+            <div class="team-card scroll-reveal">
+                <div class="team-header green-bg">
+                    <span class="snow-deco">❄️</span>
+                    <h3>찬우팀</h3>
+                    <span class="snow-deco">❄️</span>
+                </div>
+                <ul class="song-list">
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=김뜻돌+삐뽀삐뽀" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">삐뽀삐뽀</span>
+                                <span class="artist">김뜻돌</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=시이나링고+마루노우치새디스틱" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">마루노우치 새디스틱</span>
+                                <span class="artist">시이나 링고</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=유다빈밴드+좋지아니한가" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">좋지 아니한가</span>
+                                <span class="artist">유다빈밴드</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=유다빈밴드+고속도로로맨스" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">고속도로 로맨스</span>
+                                <span class="artist">유다빈밴드</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 지우팀 -->
+            <div class="team-card scroll-reveal">
+                <div class="team-header red-bg">
+                    <span class="snow-deco">❄️</span>
+                    <h3>지우팀</h3>
+                    <span class="snow-deco">❄️</span>
+                </div>
+                <ul class="song-list">
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=이적+하늘을달리다" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">하늘을 달리다</span>
+                                <span class="artist">이적</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=그리즐리+보통의하루" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">보통의 하루</span>
+                                <span class="artist">그리즐리</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=버즈+나에게로떠나는여행" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">나에게로 떠나는 여행</span>
+                                <span class="artist">버즈</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=쏜애플+시퍼런봄" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">시퍼런 봄</span>
+                                <span class="artist">쏜애플</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=SG워너비+Must+Have+Love" target="_blank" class="song-link">
+                            <span class="check-icon">✔</span>
+                            <div class="song-info">
+                                <span class="title">Must Have Love</span>
+                                <span class="artist">SG워너비 & 브아걸</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- PART 2 (Secret) -->
+            <div class="part-label scroll-reveal" style="margin-top: 50px;">Part 2</div>
+            
+            <div class="secret-card scroll-reveal">
+                <div class="secret-content">
+                    <span class="secret-icon">🔒</span>
+                    <h3>SECRET STAGE</h3>
+                    <p class="question-mark">???</p>
+                    <p class="secret-desc">현장에서 공개됩니다!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 메시지 & 포토존 섹션 -->
+    <section class="section" id="extras">
+        <div class="container center-align">
+            <h2 class="section-header scroll-reveal">Enjoy More</h2>
+            
+            <div class="grid-2-col">
+                <!-- 메시지 카드 -->
+                <div class="extra-card scroll-reveal">
+                    <div class="extra-icon">💌</div>
+                    <h3>Message Card</h3>
+                    <p>
+                        공연 중 마음에 들었던 부원에게<br>
+                        따뜻한 메시지를 남겨주세요.<br>
+                        <small>(입구 쪽 데스크에 마련되어 있습니다)</small>
+                    </p>
+                </div>
+                
+                <!-- 포토존 -->
+                <div class="extra-card scroll-reveal delay-1">
+                    <div class="extra-icon">📸</div>
+                    <h3>Photo Zone</h3>
+                    <p>
+                        오늘을 기억할 수 있는<br>
+                        크리스마스 포토존이 준비되어 있어요.<br>
+                        인생샷 남기고 가세요!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container center-align">
+            <h3>Authentic</h3>
+            <p>2025 2nd Semester Regular Performance</p>
+            <p class="copyright">© 2025 Authentic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

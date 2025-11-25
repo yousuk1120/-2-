@@ -1,0 +1,39 @@
+flowchart TD
+    Start([사용자 행동 데이터 수집]) --> Analyze[데이터 분석]
+    
+    Analyze --> Segment[사용자 세그먼테이션]
+    Segment --> IdentifyTime[최적 발송 시간 도출]
+    Segment --> IdentifyInterest[관심 카테고리 파악]
+    
+    IdentifyTime --> CreateMessage[개인화 메시지 생성]
+    IdentifyInterest --> CreateMessage
+    
+    CreateMessage --> CheckFrequency{알림 빈도 확인}
+    CheckFrequency -->|일 3회 이내| Schedule[발송 스케줄링]
+    CheckFrequency -->|일 3회 초과| Filter[우선순위 필터링]
+    Filter --> Schedule
+    
+    Schedule --> Send[알림 발송]
+    Send --> UserReceive[사용자 알림 수신]
+    
+    UserReceive --> UserCheck{사용자 확인}
+    UserCheck -->|확인| UserClick{클릭 여부}
+    UserCheck -->|무시| Track[이탈 추적]
+    
+    UserClick -->|클릭| DeepLink[딥링크 이동]
+    UserClick -->|미클릭| Track
+    
+    DeepLink --> LandingPage[랜딩 페이지]
+    LandingPage --> Conversion{전환 여부}
+    
+    Conversion -->|전환| TrackConversion[전환 추적]
+    Conversion -->|미전환| Track
+    
+    Track --> Analyze
+    TrackConversion --> Analyze
+    
+    Analyze --> Optimize[최적화]
+    Optimize --> CreateMessage
+
+
+

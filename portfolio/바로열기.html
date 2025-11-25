@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 열기 안내</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .box {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .step {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #2563eb;
+        }
+        h1 { color: #2563eb; }
+        h2 { color: #1e40af; margin-top: 30px; }
+        code {
+            background: #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📂 포트폴리오 웹 페이지 열기 방법</h1>
+    
+    <div class="box">
+        <h2>✅ 방법 1: 직접 파일 열기 (가장 쉬움!)</h2>
+        <div class="step">
+            <p><strong>1단계:</strong> 이 파일과 같은 폴더에서 <code>index.html</code> 파일을 찾으세요</p>
+            <p><strong>2단계:</strong> <code>index.html</code> 파일을 <strong>우클릭</strong> → <strong>"연결 프로그램"</strong> → <strong>웹 브라우저 선택</strong></p>
+            <p><strong>또는</strong> 파일을 브라우저 창으로 <strong>드래그 앤 드롭</strong>하세요!</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>✅ 방법 2: 배치 파일 사용</h2>
+        <div class="step">
+            <p>이 폴더에 있는 <code>열기.bat</code> 파일을 더블클릭하세요</p>
+            <p>→ 자동으로 브라우저에서 열립니다!</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>✅ 방법 3: 서버로 실행 (고급)</h2>
+        <div class="step">
+            <p><strong>PowerShell 또는 명령 프롬프트에서:</strong></p>
+            <pre style="background: #1f2937; color: #10b981; padding: 15px; border-radius: 5px; overflow-x: auto;">
+cd "C:\Users\yousu\OneDrive\Desktop\포폴 테스트용\portfolio"
+python -m http.server 8000
+            </pre>
+            <p>그 다음 브라우저에서 <code>http://localhost:8000</code> 접속</p>
+        </div>
+    </div>
+
+    <div class="box" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+        <h2>⚠️ 문제 해결</h2>
+        <ul>
+            <li><strong>파일을 찾을 수 없나요?</strong> → 파일 탐색기에서 <code>index.html</code>을 검색해보세요</li>
+            <li><strong>스타일이 안 보이나요?</strong> → <code>styles.css</code> 파일이 같은 폴더에 있는지 확인하세요</li>
+            <li><strong>서버 연결이 안 되나요?</strong> → 방법 1이나 2를 사용하세요 (서버 없이도 작동합니다!)</li>
+        </ul>
+    </div>
+
+    <div class="box" style="background: #d1fae5; border-left: 4px solid #10b981;">
+        <h2>💡 추천</h2>
+        <p><strong>가장 간단한 방법은 방법 1입니다!</strong></p>
+        <p>서버를 실행할 필요 없이 HTML 파일을 직접 브라우저에서 열면 됩니다.</p>
+    </div>
+</body>
+</html>
+
+
+

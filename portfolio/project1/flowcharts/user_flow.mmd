@@ -1,0 +1,31 @@
+flowchart TD
+    Start([앱 실행]) --> Home[홈 화면]
+    Home --> CheckLocation{위치 확인}
+    CheckLocation -->|위치 허용| ShowRecommend[위치 기반 추천 표시]
+    CheckLocation -->|위치 미허용| ShowGeneral[일반 추천 표시]
+    
+    ShowRecommend --> Browse[추천 맛집 탐색]
+    ShowGeneral --> Browse
+    
+    Browse --> Select[맛집 선택]
+    Select --> Detail[맛집 상세 페이지]
+    
+    Detail --> ViewReview[큐레이터 리뷰 확인]
+    Detail --> ViewMenu[메뉴 정보 확인]
+    Detail --> ViewMap[위치/지도 확인]
+    
+    ViewReview --> Decision{구매 결정}
+    ViewMenu --> Decision
+    ViewMap --> Decision
+    
+    Decision -->|구매| Save[저장하기]
+    Decision -->|구매| Share[공유하기]
+    Decision -->|구매| Navigate[경로 보기]
+    Decision -->|취소| Browse
+    
+    Save --> End([완료])
+    Share --> End
+    Navigate --> End
+
+
+

@@ -1,0 +1,41 @@
+flowchart TD
+    Start([상품 상세 페이지]) --> AddCart[장바구니 담기]
+    AddCart --> Modal[장바구니 담기 모달]
+    
+    Modal --> Choice1{선택}
+    Choice1 -->|지금 구매하기| Checkout[결제 프로세스]
+    Choice1 -->|장바구니 보기| CartPage[장바구니 페이지]
+    Choice1 -->|계속 쇼핑하기| Continue[쇼핑 계속]
+    
+    CartPage --> ViewItems[상품 확인]
+    ViewItems --> CheckTotal[총 금액 확인]
+    CheckTotal --> CheckCoupon{쿠폰 확인}
+    
+    CheckCoupon -->|쿠폰 적용| ApplyCoupon[쿠폰 적용]
+    CheckCoupon -->|쿠폰 미적용| Proceed[구매하기 클릭]
+    ApplyCoupon --> Proceed
+    
+    Proceed --> Step1[1단계: 주소 및 배송]
+    Step1 --> SelectAddress{주소 선택}
+    SelectAddress -->|기존 주소| UseSaved[저장된 주소 사용]
+    SelectAddress -->|새 주소| EnterNew[새 주소 입력]
+    
+    UseSaved --> SelectDelivery[배송 옵션 선택]
+    EnterNew --> SelectDelivery
+    SelectDelivery --> Step2[2단계: 결제 정보]
+    
+    Step2 --> SelectPayment[결제 수단 선택]
+    SelectPayment --> UseCoupon[쿠폰 선택]
+    UseCoupon --> UsePoint[포인트 사용]
+    UsePoint --> Step3[3단계: 최종 확인]
+    
+    Step3 --> ReviewOrder[주문 정보 확인]
+    ReviewOrder --> Confirm{최종 확인}
+    Confirm -->|확인| ProcessPayment[결제 진행]
+    Confirm -->|취소| CartPage
+    
+    ProcessPayment --> Complete[결제 완료]
+    Complete --> End([완료])
+
+
+

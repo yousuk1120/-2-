@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 3: 푸시 알림 오픈율 향상 프로젝트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">기획자 포트폴리오</h1>
+            <p class="header-subtitle">Product Manager & UX Designer</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <a href="index.html" class="back-button">← 목록으로</a>
+            
+            <div class="project-detail">
+                <h1>프로젝트 3: 푸시 알림 오픈율 향상 프로젝트</h1>
+                
+                <h2>📋 프로젝트 개요</h2>
+                <table>
+                    <tr>
+                        <th>항목</th>
+                        <th>내용</th>
+                    </tr>
+                    <tr>
+                        <td><strong>프로젝트명</strong></td>
+                        <td>푸시 알림 오픈율 향상 프로젝트</td>
+                    </tr>
+                    <tr>
+                        <td><strong>기간</strong></td>
+                        <td>2023.11 ~ 2024.04 (6개월)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>역할</strong></td>
+                        <td>데이터 기반 기획자 (Data-driven PM)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>팀 구성</strong></td>
+                        <td>기획자 2명, 데이터 분석가 2명, 개발자 2명, 마케터 1명</td>
+                    </tr>
+                    <tr>
+                        <td><strong>목표</strong></td>
+                        <td>푸시 알림 오픈율(Open Rate) 8% → 18%로 향상 (125% 개선)</td>
+                    </tr>
+                </table>
+
+                <h2>🔍 문제 정의</h2>
+                <h3>비즈니스 문제점</h3>
+                <p><strong>현황 분석:</strong></p>
+                <ul>
+                    <li>일일 푸시 알림 발송량: 약 100만 건</li>
+                    <li>평균 오픈율: 8% (업계 평균 12-15% 대비 낮음)</li>
+                    <li>클릭률(CTR): 2.5% (업계 평균 4-6% 대비 낮음)</li>
+                    <li>푸시 알림 비활성화율 증가: 월 3% 증가 추세</li>
+                </ul>
+
+                <h3>사용자 Pain Point</h3>
+                <p><strong>주요 사용자 불만:</strong></p>
+                <ol>
+                    <li><strong>과도한 알림</strong>
+                        <ul>
+                            <li>하루에 너무 많은 알림을 받아서 피로감</li>
+                            <li>중요한 알림을 놓침</li>
+                        </ul>
+                    </li>
+                    <li><strong>관심 없는 알림</strong>
+                        <ul>
+                            <li>내가 관심 없는 상품/서비스에 대한 알림</li>
+                            <li>개인화되지 않은 일반적인 메시지</li>
+                        </ul>
+                    </li>
+                    <li><strong>타이밍 문제</strong>
+                        <ul>
+                            <li>수면 시간이나 업무 시간에 알림 수신</li>
+                            <li>원하는 시간에 알림을 받고 싶음</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2>👥 사용자 조사</h2>
+                <h3>Persona</h3>
+                
+                <div class="metric-card">
+                    <h4>Persona 1: 정혜진 (29세, 직장인)</h4>
+                    <p><strong>배경</strong></p>
+                    <ul>
+                        <li>스마트폰을 자주 사용</li>
+                        <li>업무 중에는 알림을 확인하지 않음</li>
+                        <li>저녁 시간대에 쇼핑 앱을 주로 사용</li>
+                    </ul>
+                    <p><strong>목표</strong></p>
+                    <ul>
+                        <li>필요한 정보만 받고 싶음</li>
+                        <li>원하는 시간에 알림을 받고 싶음</li>
+                    </ul>
+                    <p><strong>Pain Point</strong></p>
+                    <ul>
+                        <li>업무 중에 쇼핑 알림이 와서 방해됨</li>
+                        <li>하루에 10개 이상의 알림을 받아서 피로감</li>
+                        <li>관심 없는 상품에 대한 알림이 많음</li>
+                    </ul>
+                </div>
+
+                <h3>핵심 인사이트</h3>
+                <ol>
+                    <li><strong>개인화의 중요성</strong>: 사용자는 자신에게 관련된 알림만 원함</li>
+                    <li><strong>타이밍의 중요성</strong>: 사용자의 활동 시간대에 맞춘 알림이 효과적</li>
+                    <li><strong>빈도 최적화 필요</strong>: 너무 많은 알림은 오히려 역효과</li>
+                    <li><strong>메시지 품질</strong>: 과장되지 않고 정확한 메시지가 신뢰도를 높임</li>
+                </ol>
+
+                <h2>🎯 핵심 기능 정의</h2>
+                <h3>기능 리스트</h3>
+                <h4>1. 개인화된 알림 전략</h4>
+                <ul>
+                    <li>사용자 행동 기반 상품 추천 알림</li>
+                    <li>관심 카테고리 기반 알림</li>
+                    <li>구매 이력 기반 맞춤 알림</li>
+                </ul>
+
+                <h4>2. 최적 발송 시간 도출</h4>
+                <ul>
+                    <li>사용자별 활동 시간대 분석</li>
+                    <li>세그먼트별 최적 발송 시간 설정</li>
+                    <li>실시간 발송 시간 조정</li>
+                </ul>
+
+                <h4>3. 알림 빈도 최적화</h4>
+                <ul>
+                    <li>사용자별 알림 빈도 제한 (일 3회 이내)</li>
+                    <li>중요도 기반 알림 우선순위</li>
+                    <li>알림 설정 페이지 개선</li>
+                </ul>
+
+                <h2>📊 결과 및 성과 지표</h2>
+                <h3>정량적 지표</h3>
+                <table>
+                    <tr>
+                        <th>지표</th>
+                        <th>개선 전</th>
+                        <th>개선 후</th>
+                        <th>개선율</th>
+                    </tr>
+                    <tr>
+                        <td><strong>푸시 알림 오픈율</strong></td>
+                        <td>8.0%</td>
+                        <td>18.5%</td>
+                        <td>+131%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>클릭률 (CTR)</strong></td>
+                        <td>2.5%</td>
+                        <td>5.8%</td>
+                        <td>+132%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>전환율 (CVR)</strong></td>
+                        <td>1.2%</td>
+                        <td>2.8%</td>
+                        <td>+133%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>일일 알림 발송량</strong></td>
+                        <td>1,000,000건</td>
+                        <td>800,000건</td>
+                        <td>-20% (빈도 최적화)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>알림 비활성화율</strong></td>
+                        <td>월 3% 증가</td>
+                        <td>월 0.5% 증가</td>
+                        <td>-83%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>알림 관련 매출</strong></td>
+                        <td>기준</td>
+                        <td>+45%</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+
+                <h3>핵심 성과</h3>
+                <ol>
+                    <li><strong>오픈율 개선</strong>: 목표 대비 103% 달성 (목표 18%, 실제 18.5%)</li>
+                    <li><strong>사용자 경험 향상</strong>: 알림 비활성화율 83% 감소</li>
+                    <li><strong>매출 증가</strong>: 알림 관련 매출 45% 증가</li>
+                    <li><strong>효율성 향상</strong>: 발송량 20% 감소에도 불구하고 오픈율 131% 증가</li>
+                </ol>
+
+                <h2>💭 회고 (Retrospective)</h2>
+                <h3>잘한 점 (Keep)</h3>
+                <ol>
+                    <li><strong>데이터 기반 의사결정</strong>: 사용자 행동 데이터를 철저히 분석하여 개선 방향 도출</li>
+                    <li><strong>A/B 테스트 체계화</strong>: 모든 가설을 A/B 테스트로 검증하여 객관적 결과 도출</li>
+                    <li><strong>세그먼테이션 전략</strong>: 사용자 그룹별로 다른 전략을 적용하여 효과 극대화</li>
+                </ol>
+
+                <h3>아쉬운 점 (Problem)</h3>
+                <ol>
+                    <li><strong>초기 데이터 수집 부족</strong>: 프로젝트 초기 사용자 행동 데이터가 부족하여 분석에 시간이 걸림</li>
+                    <li><strong>실시간 최적화 지연</strong>: 사용자 행동 변화에 대한 실시간 대응이 늦었음</li>
+                </ol>
+
+                <h3>개선 방안 (Try)</h3>
+                <ol>
+                    <li><strong>실시간 개인화</strong>: 사용자 행동 변화를 실시간으로 반영하는 시스템 구축</li>
+                    <li><strong>예측 모델 도입</strong>: 머신러닝을 활용한 사용자 행동 예측 및 최적 발송 시간 예측</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 기획자 포트폴리오. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
